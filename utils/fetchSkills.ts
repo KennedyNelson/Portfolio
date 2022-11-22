@@ -1,7 +1,9 @@
 import { Skill } from '../typings'
 
 export const fetchSkills = async() => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSkills`);
+    const dev = process.env.NODE_ENV !== 'production';
+    const res = await fetch(`${dev ? 'http://localhost:3000' : 'https://myportfolio-ecru-nu.vercel.app/'}/api/Skills`);
+
 
     const data = await res.json()
     const skills: Skill[] = data.skills;
