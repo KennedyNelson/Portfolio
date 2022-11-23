@@ -44,7 +44,7 @@ export default function ContactMe({}: Props) {
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-10 mx-auto max-w-[70%]'>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-10 mx-auto max-w-[60%]'>
                 <div className='flex space-x-2'>
                     <input {...register('name')} type='text' placeholder='Name' className='contactInput w-[50%]'/>
                     <input {...register('email')} type='email'placeholder='Email'  className='contactInput w-[50%]'/>
