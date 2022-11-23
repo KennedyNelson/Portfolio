@@ -52,7 +52,7 @@ export default function Home({pageInfo, experiences, skills, projects, socials}:
       <section id='contact' className='snap-start'>
         <ContactMe />
       </section>
-        <footer className='sticky bottom-5 w-full'>
+        <footer className='sticky bottom-3 w-full'>
           <div className='flex items-center justify-center'>
             <Link href="#hero">
               <img className='h-10 w-10 rounded-full filter-grayscale hover:grayscale-0 cursor-pointer' 

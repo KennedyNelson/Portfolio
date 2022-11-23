@@ -24,7 +24,7 @@ export default function ContactMe({}: Props) {
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
             Contact
         </h3>
-        <div className='-mb-40 flex flex-col space-y-10'>
+        <div className='-mb-20 sm:-mb-40 flex flex-col space-y-5'>
             <h4 className='text-lg md:text-4xl font-semibold text-center'>
                 I have got just what you need.{" "}
                 <span className='decoration-[#F7AB0A]/50 underline'>Lets Talk</span>
