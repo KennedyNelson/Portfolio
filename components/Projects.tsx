@@ -19,7 +19,7 @@ function Projects({ projects }: Props) {
     }}
     className='h-screen relative flex overflow-hidden justify-evenly flex-col text-left md:flex-row
     max-w-full mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+        <h3 className='absolute top-24 uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-2xl'>
             Projects
         </h3>
         <div className='mt-34 mb-10 md:mt-0 md:mb-0 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>

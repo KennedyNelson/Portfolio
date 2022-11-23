@@ -21,7 +21,7 @@ export default function ContactMe({}: Props) {
     return (
     <div className='h-screen relative flex overflow-hidden flex-col text-center md:flex-row 
     max-w-7xl justify-evenly mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+        <h3 className='absolute top-24 uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-2xl'>
             Contact
         </h3>
         <div className='-mb-20 sm:-mb-40 flex flex-col space-y-5'>
@@ -51,7 +51,7 @@ export default function ContactMe({}: Props) {
                 </div>
                 <input {...register('subject')} type='text' placeholder='Subject' className='contactInput'/>
                 <textarea {...register('message')} placeholder='Message' className='contactInput'/>
-                <button type='submit' className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black fon-bold text-lg'>Submit</button>
+                <button type='submit' className='bg-[#F7AB0A] py-3 sm:py-5 px-10 rounded-md text-black fon-bold text-lg'>Submit</button>
             </form>
         </div>
     </div>
