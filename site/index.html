@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Kennedy Nelson is a software engineer at Oracle working on full stack development, distributed systems and cloud. Experience, skills, projects and contact details.">
+<meta name="theme-color" content="#070a12">
+<link rel="canonical" href="https://kennedy-nelson-portfolio.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kennedy Nelson">
+<meta property="og:title" content="Kennedy Nelson | Software Engineer">
+<meta property="og:description" content="Kennedy Nelson is a software engineer at Oracle working on full stack development, distributed systems and cloud. Experience, skills, projects and contact details.">
+<meta property="og:url" content="https://kennedy-nelson-portfolio.vercel.app/">
+<meta property="og:image" content="https://kennedy-nelson-portfolio.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kennedy-nelson-portfolio.vercel.app/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070a12'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%235eead4'%3EKN%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kennedy Nelson","jobTitle":"Software Engineer","worksFor":{"@type":"Organization","name":"Oracle"},"url":"https://kennedy-nelson-portfolio.vercel.app/","sameAs":["https://www.linkedin.com/in/kennedy-nelson-/","https://www.instagram.com/kennedynelson__/"]}</script>
+<title>Kennedy Nelson | Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: single-column "mission control" scroll. Sticky glass nav, hero with live status line,
+   timeline for experience, grouped skill matrix, project cards, quiet contact block. One bold element: the signal-grid canvas behind the hero. */
+:root{
+  --ink:#070a12;          /* deep blue-black base */
+  --panel:#0d1220;        /* raised surface */
+  --panel-2:#121a2d;
+  --line:#1d2740;
+  --text:#e6ecf8;
+  --muted:#9aa6c2;
+  --signal:#5eead4;       /* ice teal accent */
+  --signal-dim:#2a6f67;
+  --ember:#f5b45a;        /* warm secondary, nod to the original gold ring */
+  --display:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:#070a12}
+img{max-width:100%}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;
+  margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
+#signal{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.55}
+.glow{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(520px circle at var(--mx,70%) var(--my,10%),rgba(94,234,212,.10),transparent 60%)}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+.nav-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  background:rgba(7,10,18,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(29,39,64,.7)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ink)}
+.logo{font-family:var(--mono);font-size:14px;letter-spacing:.04em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px rgba(94,234,212,.15);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(94,234,212,0)}}
+nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0}
+nav a{display:block;padding:8px 12px;border-radius:999px;font-size:13px;text-decoration:none;color:var(--muted);letter-spacing:.02em;transition:.2s}
+nav a:hover,nav a.on{color:var(--text);background:var(--panel-2)}
+.cta-sm{font-family:var(--mono);font-size:12px;text-decoration:none;padding:9px 14px;border:1px solid var(--signal-dim);border-radius:8px;color:var(--signal);transition:.2s;white-space:nowrap}
+.cta-sm:hover{background:rgba(94,234,212,.08)}
+@media(max-width:760px){nav{display:none}}
+
+section{padding-block:clamp(48px,7vw,84px)}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin:0 0 14px}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4.2vw,44px);line-height:1.1;letter-spacing:-.02em;margin:0 0 36px;text-wrap:balance;max-width:20ch}
+
+/* hero */
+.hero{padding-top:clamp(36px,7vw,84px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);background:rgba(13,18,32,.7);padding:7px 12px;border-radius:999px;margin-bottom:26px}
+.status b{color:var(--signal);font-weight:500}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,8.2vw,92px);line-height:.98;letter-spacing:-.035em;margin:0 0 22px;text-wrap:balance}
+h1 span{background:linear-gradient(100deg,var(--text) 20%,var(--signal) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-family:var(--mono);font-size:clamp(13px,1.6vw,16px);color:var(--muted);min-height:1.6em;margin:0 0 22px}
+.role em{font-style:normal;color:var(--ember)}
+.caret{display:inline-block;width:8px;height:1.05em;background:var(--signal);vertical-align:-.18em;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{max-width:52ch;color:#b6c0d8;font-size:clamp(16px,1.6vw,18px);margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--display);font-weight:500;font-size:15px;text-decoration:none;padding:13px 22px;border-radius:10px;border:1px solid var(--line);background:var(--panel);transition:.2s;display:inline-flex;align-items:center;gap:8px;cursor:pointer;color:var(--text)}
+.btn:hover{border-color:var(--signal-dim);transform:translateY(-1px)}
+.btn.primary{background:var(--signal);color:#04211d;border-color:var(--signal)}
+.btn.primary:hover{background:#7ff3e0}
+.portrait{position:relative;aspect-ratio:4/5;max-width:380px;width:100%;margin-inline:auto;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.portrait::before,.portrait::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--signal);z-index:3;pointer-events:none}
+.portrait::before{top:12px;left:12px;border-right:0;border-bottom:0}
+.portrait::after{bottom:12px;right:12px;border-left:0;border-top:0}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.05)}
+.portrait .mono-fallback{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:96px;letter-spacing:-.04em;background:radial-gradient(circle at 30% 20%,var(--panel-2),var(--panel));color:var(--signal)}
+.portrait .scan{position:absolute;inset:0;z-index:2;background:linear-gradient(transparent 48%,rgba(94,234,212,.16) 50%,transparent 52%);background-size:100% 220%;animation:scan 6s linear infinite;pointer-events:none}
+@keyframes scan{from{background-position:0 100%}to{background-position:0 -100%}}
+.tag-ov{position:absolute;left:14px;bottom:14px;z-index:3;font-family:var(--mono);font-size:12px;background:rgba(7,10,18,.78);border:1px solid var(--line);padding:6px 10px;border-radius:6px;color:var(--muted)}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.portrait{max-width:168px;aspect-ratio:1;order:-1;margin-inline:0;border-radius:18px}.mono-fallback{font-size:56px!important}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,64px)}
+.about p{margin:0 0 18px;color:#b6c0d8;max-width:60ch}
+.facts{display:grid;gap:12px;align-content:start}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.fact span{color:var(--muted);font-size:14px}
+.fact b{font-family:var(--mono);font-weight:500;font-size:13px;text-align:right;color:var(--text)}
+.fact.hot b{color:var(--ember)}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0 0 0 26px;position:relative;display:grid;gap:18px}
+.timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--signal),var(--line) 70%)}
+.job{position:relative;padding:22px 24px;border:1px solid var(--line);border-radius:14px;background:var(--panel);transition:.25s}
+.job:hover{border-color:var(--signal-dim);transform:translateX(3px)}
+.job::before{content:"";position:absolute;left:-26px;top:30px;width:11px;height:11px;border-radius:50%;background:var(--ink);border:2px solid var(--signal-dim)}
+.job.now::before{background:var(--signal);border-color:var(--signal);box-shadow:0 0 0 5px rgba(94,234,212,.15)}
+.job-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline;margin-bottom:10px}
+.job h3{font-family:var(--display);font-weight:600;font-size:20px;margin:0;letter-spacing:-.01em}
+.job h3 small{font-weight:400;color:var(--muted);font-size:15px}
+.when{font-family:var(--mono);font-size:13px;color:var(--ember)}
+.job ul{margin:0;padding-left:18px;color:#b6c0d8}
+.job li{margin:4px 0}
+.job li::marker{color:var(--signal-dim)}
+
+/* skills */
+.matrix{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
+.cell{padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.cell h3{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal);margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;padding:6px 12px;border-radius:8px;background:var(--panel-2);border:1px solid var(--line);color:var(--text);transition:.2s}
+.chip:hover{border-color:var(--signal-dim);color:var(--signal)}
+.chip.learn{border-style:dashed;color:var(--muted)}
+.legend{font-size:13px;color:var(--muted);margin-top:18px;font-family:var(--mono)}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.proj{padding:28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,var(--panel-2),var(--panel));display:flex;flex-direction:column;gap:14px;transition:.25s}
+.proj:hover{border-color:var(--signal-dim);transform:translateY(-3px)}
+.proj .kind{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+.proj h3{font-family:var(--display);font-weight:600;font-size:24px;margin:0;letter-spacing:-.015em}
+.proj p{margin:0;color:#b6c0d8;flex:1}
+.proj .chips .chip{font-size:13px;padding:4px 10px;font-family:var(--mono)}
+
+/* beyond code */
+.court{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px}
+.sport{padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.sport b{display:block;font-family:var(--display);font-size:20px;font-weight:600;margin-bottom:4px}
+.sport span{color:var(--muted);font-size:14px}
+.sport.lead{border-color:rgba(245,180,90,.4)}
+.sport.lead b{color:var(--ember)}
+
+/* contact */
+.contact{padding:clamp(28px,5vw,56px);border:1px solid var(--line);border-radius:22px;background:radial-gradient(700px circle at 100% 0,rgba(94,234,212,.09),transparent 60%),var(--panel);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center}
+.contact h2{margin-bottom:14px}
+.contact p{margin:0;color:#b6c0d8;max-width:44ch}
+.contact .eyebrow{color:var(--signal);margin-bottom:14px}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px;font-family:var(--mono);font-size:15px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--ink);margin-bottom:14px;word-break:break-all}
+.mail button{margin-left:auto;font-family:var(--mono);font-size:12px;padding:7px 12px;border-radius:8px;border:1px solid var(--signal-dim);background:transparent;color:var(--signal);cursor:pointer}
+.mail button:hover{background:rgba(94,234,212,.08)}
+.social{display:flex;flex-wrap:wrap;gap:10px}
+.social a{font-size:14px;text-decoration:none;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel-2);transition:.2s}
+.social a:hover{border-color:var(--signal-dim);color:var(--signal)}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+footer{padding:28px 0 max(36px,env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+.rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<canvas id="signal" aria-hidden="true"></canvas>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="nav"><div class="nav-in">
+    <a class="logo" href="#top"><i></i>kennedy.nelson</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="cta-sm" href="#contact">Get in touch</a>
+  </div></header>
+
+<div class="wrap">
+
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <div class="status rise"><span>status</span><b>● building at Oracle</b></div>
+        <h1 id="name" class="rise" style="animation-delay:.05s">Kennedy<br><span>Nelson</span></h1>
+        <p class="role rise" style="animation-delay:.12s"><span id="typed">Software Engineer</span><span class="caret"></span></p>
+        <p class="lede rise" style="animation-delay:.18s">I build full stack products and the distributed backends behind them. Java, Python and JavaScript on cloud infrastructure, shipped through CI/CD and run on Kubernetes. Off the keyboard I play badminton, and I have competed at the national level.</p>
+        <div class="btns rise" style="animation-delay:.24s">
+          <a class="btn primary" href="#projects">See my work →</a>
+          <a class="btn" href="#contact">Say hello</a>
+        </div>
+      </div>
+      <div class="portrait rise" style="animation-delay:.2s">
+        <div class="mono-fallback" id="mono">KN</div>
+        <img id="photo" src="https://cdn.sanity.io/images/yg6o9ayc/production/b894e430849b5c97e54d914a90f5e3d06bbabd71-1319x1319.jpg?w=900&auto=format&q=82" alt="Portrait of Kennedy Nelson" width="1319" height="1319" fetchpriority="high" onload="document.getElementById('mono').hidden=true" onerror="this.remove()">
+        <div class="scan"></div>
+        <div class="tag-ov">Kerala, India</div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="h-about">
+      <p class="eyebrow">About</p>
+      <h2 id="h-about">An engineer who plays to win</h2>
+      <div class="about">
+        <div>
+          <p>I'm Kennedy, a software engineer working on full stack development, distributed systems and microservices. I studied at TKM College of Engineering, Kollam, graduating in 2022, and started my professional career the same year.</p>
+          <p>I began on the front end with Next.js, React and Firebase, then moved deeper into the backend: event streaming with Kafka and Apache Flink, services on Java and Python, and cloud delivery with Kubernetes and CI/CD.</p>
+          <p>Outside work I am a sports person first. Badminton, football and athletics are my favourites, and I have played badminton at the national level.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><span>Role</span><b>Software Engineer, Oracle</b></div>
+          <div class="fact"><span>Education</span><b>B.Tech, TKMCE Kollam · 2018 to 2022</b></div>
+          <div class="fact"><span>Focus</span><b>Distributed systems · Cloud</b></div>
+          <div class="fact hot"><span>Badminton</span><b>National level player</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="h-exp">
+      <p class="eyebrow">Experience</p>
+      <h2 id="h-exp">Where I've shipped</h2>
+      <ol class="timeline">
+        <li class="job now">
+          <div class="job-top"><h3>Software Engineer <small>· Oracle</small></h3><span class="when">Present</span></div>
+          <ul>
+            <li>Full stack development with a focus on distributed systems and microservices.</li>
+            <li>Cloud-native delivery on Kubernetes with CI/CD pipelines.</li>
+            <li>Working across Java, Python and JavaScript.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <div class="job-top"><h3>Software Developer <small>· IBM</small></h3><span class="when">From Jul 2022</span></div>
+          <ul>
+            <li>Worked on a project called Neptune.</li>
+            <li>Learned and applied Apache Flink and Kafka for streaming workloads.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <div class="job-top"><h3>Frontend Developer <small>· HyreSnap</small></h3><span class="when">Oct 2020 to Oct 2021</span></div>
+          <ul>
+            <li>Built a responsive web application from scratch as part of the frontend team.</li>
+            <li>Picked up Next.js, Redux and Firebase on the job.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" aria-labelledby="h-skills">
+      <p class="eyebrow">Skills</p>
+      <h2 id="h-skills">The stack I work in</h2>
+      <div class="matrix">
+        <div class="cell"><h3>Frontend</h3><div class="chips">
+          <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Redux</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Tailwind CSS</span></div></div>
+        <div class="cell"><h3>Backend and data</h3><div class="chips">
+          <span class="chip">Java</span><span class="chip">Python</span><span class="chip">Node.js</span><span class="chip">Firebase</span><span class="chip">Microservices</span><span class="chip">Kafka</span><span class="chip">Apache Flink</span></div></div>
+        <div class="cell"><h3>Cloud and delivery</h3><div class="chips">
+          <span class="chip">Kubernetes</span><span class="chip">CI/CD</span><span class="chip">Cloud</span><span class="chip">Distributed systems</span></div></div>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="h-proj">
+      <p class="eyebrow">Projects</p>
+      <h2 id="h-proj">Selected work</h2>
+      <div class="projects">
+        <article class="proj">
+          <span class="kind">Side project</span>
+          <h3>Twitter Clone</h3>
+          <p>A responsive Twitter clone with user authentication, built with Next.js, Firebase, Redux and Tailwind CSS.</p>
+          <div class="chips"><span class="chip">Next.js</span><span class="chip">Firebase</span><span class="chip">Tailwind</span></div>
+        </article>
+        <article class="proj">
+          <span class="kind">Work · IBM</span>
+          <h3>Project Neptune</h3>
+          <p>A project I work on at IBM, where I use Apache Flink and Kafka for streaming data pipelines.</p>
+          <div class="chips"><span class="chip">Apache Flink</span><span class="chip">Kafka</span><span class="chip">Streaming</span></div>
+        </article>
+        <article class="proj">
+          <span class="kind">Work · HyreSnap</span>
+          <h3>HyreSnap Web App</h3>
+          <p>A responsive web application built from scratch with the frontend team.</p>
+          <div class="chips"><span class="chip">Next.js</span><span class="chip">Redux</span><span class="chip">Firebase</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="beyond" aria-labelledby="h-beyond">
+      <p class="eyebrow">Beyond code</p>
+      <h2 id="h-beyond">Sport is the other half</h2>
+      <div class="court">
+        <div class="sport lead"><b>Badminton</b><span>Played at the national level</span></div>
+        <div class="sport"><b>Football</b><span>Favourite sport</span></div>
+        <div class="sport"><b>Athletics</b><span>Favourite sport</span></div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <div class="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="h-contact">Let's build something</h2>
+          <p>Open to conversations about engineering roles and collaborations. Email is the fastest way to reach me.</p>
+        </div>
+        <div>
+          <div class="mail"><span id="addr">kennedynelson0812@gmail.com</span><button type="button" id="copy">Copy</button></div>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/kennedy-nelson-/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/kennedynelson__/" target="_blank" rel="noopener">Instagram</a>
+            <a href="mailto:kennedynelson0812@gmail.com">Email me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Kennedy Nelson</span><span>Kerala, India</span></footer>
+</div>
+
+<script>
+(function(){
+  /* typed role line */
+  var el=document.getElementById('typed');
+  var lines=['Software Engineer','Full Stack Developer','Distributed Systems','Cloud and Kubernetes'];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    var li=0,ci=lines[0].length,del=true,wait=45;
+    setInterval(function(){
+      if(wait>0){wait--;return}
+      var s=lines[li];
+      if(del){ci--;if(ci<=0){del=false;li=(li+1)%lines.length;ci=0}}
+      else{ci++;if(ci>=lines[li].length){del=true;wait=22}}
+      el.textContent=lines[li].slice(0,ci);
+    },70);
+  }
+
+  /* copy email */
+  var btn=document.getElementById('copy'),addr=document.getElementById('addr');
+  btn.addEventListener('click',function(){
+    function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(addr);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';setTimeout(function(){btn.textContent='Copy'},1600)}
+    try{navigator.clipboard.writeText(addr.textContent).then(done,fallback)}catch(e){fallback()}
+  });
+
+  /* active nav link */
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});if(map[e.target.id])map[e.target.id].classList.add('on')}
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
+  }
+
+  /* cursor glow */
+  var g=document.querySelector('.glow');
+  addEventListener('pointermove',function(e){g.style.setProperty('--mx',e.clientX+'px');g.style.setProperty('--my',e.clientY+'px')},{passive:true});
+
+  /* signal grid canvas */
+  var c=document.getElementById('signal'),x=c.getContext('2d'),W,H,pts=[],dpr=Math.min(devicePixelRatio||1,2),raf;
+  function size(){W=c.width=innerWidth*dpr;H=c.height=innerHeight*dpr;
+    var n=Math.round(Math.min(70,innerWidth/18));pts=[];
+    for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25*dpr,vy:(Math.random()-.5)*.25*dpr})}
+  function draw(){
+    x.clearRect(0,0,W,H);
+    var step=64*dpr;x.strokeStyle='rgba(94,234,212,0.045)';x.lineWidth=1;x.beginPath();
+    for(var gx=0;gx<W;gx+=step){x.moveTo(gx,0);x.lineTo(gx,H)}
+    for(var gy=0;gy<H;gy+=step){x.moveTo(0,gy);x.lineTo(W,gy)}
+    x.stroke();
+    var d=150*dpr;
+    for(var i=0;i<pts.length;i++){
+      var p=pts[i];
+      if(!reduce){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+      x.fillStyle='rgba(94,234,212,0.55)';x.beginPath();x.arc(p.x,p.y,1.6*dpr,0,6.283);x.fill();
+      for(var j=i+1;j<pts.length;j++){
+        var q=pts[j],dx=p.x-q.x,dy=p.y-q.y,dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<d){x.strokeStyle='rgba(94,234,212,'+(0.16*(1-dist/d))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}
+      }
+    }
+    if(!reduce)raf=requestAnimationFrame(draw);
+  }
+  size();draw();
+  addEventListener('resize',function(){size();if(reduce)draw()});
+  document.addEventListener('visibilitychange',function(){if(document.hidden)cancelAnimationFrame(raf);else if(!reduce)draw()});
+})();
+</script>
+</body>
+</html>
